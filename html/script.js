@@ -1,4 +1,4 @@
-(function() {
+(function () {
   const cheese = document.getElementById('cheese');
   const message = document.getElementById('message');
   const app = document.getElementById('app');
@@ -29,15 +29,15 @@
 
   function sliceCheese() {
     if (locked) return;
-  if (cutAmount >= maxHeight) return;
+    if (cutAmount >= maxHeight) return;
     locked = true;
 
-  const sliceHeight = Math.min(CONFIG.sliceThickness, maxHeight - cutAmount);
-  // Trigger slicer bounce
-  slicer.classList.remove('slice-move');
-  // Force reflow to allow retriggering the animation
-  void slicer.offsetWidth;
-  slicer.classList.add('slice-move');
+    const sliceHeight = Math.min(CONFIG.sliceThickness, maxHeight - cutAmount);
+    // Trigger slicer bounce
+    slicer.classList.remove('slice-move');
+    // Force reflow to allow retriggering the animation
+    void slicer.offsetWidth;
+    slicer.classList.add('slice-move');
     const slice = document.createElement('div');
     slice.className = 'slice';
     slice.style.height = sliceHeight + 'px';
@@ -47,22 +47,22 @@
     fill.style.setProperty('--slice-offset', cutAmount + 'px');
     slice.appendChild(fill);
 
-  const cheeseRect = cheese.getBoundingClientRect();
-  // Visible top of cheese after clipping is cutAmount below original top
-  const visibleTop = cheeseRect.top + cutAmount;
-  slice.style.top = (visibleTop + window.scrollY) + 'px';
+    const cheeseRect = cheese.getBoundingClientRect();
+    // Visible top of cheese after clipping is cutAmount below original top
+    const visibleTop = cheeseRect.top + cutAmount;
+    slice.style.top = (visibleTop + window.scrollY) + 'px';
     slice.style.position = 'fixed';
-  // No clip-path here; slice has its own height. We just align internal fill.
-  // Slight horizontal randomness for variety
-  const dx = (Math.random()*40) - 20; // -20..20 px
-  slice.style.setProperty('--dx', dx.toFixed(1) + 'px');
+    // No clip-path here; slice has its own height. We just align internal fill.
+    // Slight horizontal randomness for variety
+    const dx = (Math.random() * 40) - 20; // -20..20 px
+    slice.style.setProperty('--dx', dx.toFixed(1) + 'px');
 
     document.body.appendChild(slice);
     slice.addEventListener('animationend', () => slice.remove());
 
-  cutAmount += sliceHeight;
-  cheese.querySelector('.cheese-fill').style.setProperty('--cheese-cut', cutAmount + 'px');
-  updateSlicerOffset();
+    cutAmount += sliceHeight;
+    cheese.querySelector('.cheese-fill').style.setProperty('--cheese-cut', cutAmount + 'px');
+    updateSlicerOffset();
     if (cutAmount >= maxHeight) {
       setTimeout(() => { cheese.style.visibility = 'hidden'; message.classList.remove('hidden'); }, 320);
     }
@@ -77,19 +77,19 @@
     cheese.style.visibility = 'visible';
     cheese.querySelector('.cheese-fill').style.setProperty('--cheese-cut', '0px');
     message.classList.add('hidden');
-  updateSlicerOffset();
+    updateSlicerOffset();
   }
 
   function handleWheel(e) {
     e.preventDefault();
-  const dir = e.deltaY > 0 ? 1 : -1;
-  if (dir > 0) sliceCheese();
+    const dir = e.deltaY > 0 ? 1 : -1;
+    if (dir > 0) sliceCheese();
   }
 
   function handleKey(e) {
-    if (['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)) {
+    if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(e.key)) {
       e.preventDefault();
-  sliceCheese();
+      sliceCheese();
     }
   }
 
