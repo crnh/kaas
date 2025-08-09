@@ -7,6 +7,36 @@ body {
   user-select: none;
 }
 
+#footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: .5px;
+  color: #4d3a00;
+  text-align: center;
+  padding: 6px 10px calc(6px + env(safe-area-inset-bottom));
+  pointer-events: auto; /* allow clicks */
+  opacity: .7;
+  mix-blend-mode: multiply;
+  user-select: none;
+  z-index: 1000; /* above slices (z 15) */
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+#footer a:focus-visible { outline: 2px solid #ffbf00; outline-offset: 2px; }
+#footer a:hover { opacity: .95; }
+#footer a:active { opacity: 1; }
+@media (max-width: 480px) {
+  #footer { font-size: 10px; }
+}
+
 #app {
   height: 100vh;
   width: 100vw;
