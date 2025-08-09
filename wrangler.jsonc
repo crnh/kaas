@@ -4,15 +4,23 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "proud-hall-c636",
+	"name": "kaas",
 	"compatibility_date": "2025-08-09",
 	"assets": {
 		// The path to the directory containing the `index.html` file to be served at `/`
-		"directory": "./public"
+		"directory": "./html"
 	},
 	"observability": {
-		"enabled": true
-	}
+		"enabled": false
+	},
+	"routes": [
+		{
+			// The route to match for this Worker
+			"pattern": "kaas.haasjes.nu",
+			// The name of the Worker to handle the route
+			"custom_domain": true 
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

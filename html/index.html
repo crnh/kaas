@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cheese Slicer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Scroll to slice the cheese – a playful static demo." />
+</head>
+<body>
+  <div id="app">
+    <div class="cheese-wrapper" aria-live="polite">
+      <div id="cheese" role="img" aria-label="Block of yellow cheese">
+        <div class="cheese-fill" aria-hidden="true"></div>
+      </div>
+      <div id="slicer" role="img" aria-label="Cheese slicer">
+        <div class="blade">
+          <div class="slot" aria-hidden="true"></div>
+          <div class="wire" aria-hidden="true"></div>
+        </div>
+        <div class="neck" aria-hidden="true"></div>
+        <div class="handle" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div id="message" class="hidden" role="status">
+      <span class="end-text">All cheese sliced.</span>
+      <button id="restart" type="button" class="restart-btn" aria-label="Restart slicing">Restart</button>
+    </div>
+  </div>
+  <noscript>This page requires JavaScript for the slicing interaction.</noscript>
+  <script src="script.js"></script>
+</body>
+</html>
