@@ -51,7 +51,6 @@ body {
   transition: clip-path .28s cubic-bezier(.55,.1,.3,1);
   /* Dual shadow: edge depth + ambient drop */
   box-shadow: inset 0 -6px 10px -4px rgba(0,0,0,0.35), inset 0 4px 6px -3px rgba(255,255,255,0.6);
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.28));
 }
 
 #cheese .cheese-fill::before {
