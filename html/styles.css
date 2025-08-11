@@ -33,10 +33,9 @@ body {
   padding: 6px 10px calc(6px + env(safe-area-inset-bottom));
   pointer-events: auto;
   /* allow clicks */
-  opacity: .7;
   mix-blend-mode: multiply;
   user-select: none;
-  z-index: 1000;
+  z-index: 20;
   /* above slices (z 15) */
 }
 
