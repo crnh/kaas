@@ -17,7 +17,21 @@
       </div>
       <div id="slicer" role="img" aria-label="Cheese slicer">
         <div class="blade">
-          <div class="slot" aria-hidden="true"></div>
+          <svg class="blade-svg" viewBox="0 0 140 95" aria-hidden="true" width="140" height="95">
+            <defs>
+              <mask id="bladeHole" maskUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="140" height="95" rx="12" ry="12" fill="#fff" />
+                <rect x="10" y="38.5" width="120" height="18" rx="9" ry="9" fill="#000" />
+              </mask>
+              <linearGradient id="bladeMetal" x1="0" y1="0" x2="0.8" y2="1">
+                <stop offset="0%" stop-color="#fdfdfd" />
+                <stop offset="55%" stop-color="#c4c4c4" />
+                <stop offset="70%" stop-color="#e7e7e7" />
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="140" height="95" rx="12" ry="12" fill="url(#bladeMetal)" mask="url(#bladeHole)" />
+            <rect x="1" y="1" width="138" height="93" rx="11" ry="11" fill="none" stroke="#b3b3b3" stroke-width="2" />
+          </svg>
           <div class="wire" aria-hidden="true"></div>
         </div>
         <div class="neck" aria-hidden="true"></div>

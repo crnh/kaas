@@ -76,7 +76,8 @@ body {
 
 @supports (height: 100dvh) {
   #app {
-    height: 100dvh;   /* adapts to dynamic UI (iOS/Chrome mobile) */
+    height: 100dvh;
+    /* adapts to dynamic UI (iOS/Chrome mobile) */
   }
 }
 
@@ -151,7 +152,7 @@ body {
   will-change: transform;
 }
 
-#slicer .blade {
+/* #slicer .blade {
   position: relative;
   width: 140px;
   height: 95px;
@@ -172,6 +173,26 @@ body {
   background: linear-gradient(180deg, #c9c9c9, #9d9d9d 55%, #c9c9c9);
   border-radius: 10px;
   box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.6);
+} */
+
+#slicer .blade {
+  position: relative;
+  width: 140px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 12px 22px 22px;
+  overflow: visible;
+  /* svg handles its own rounded rect */
+}
+
+#slicer .blade-svg {
+  display: block;
+  width: 140px;
+  height: 95px;
+  filter:
+    drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 6px -2px rgba(0, 0, 0, 0.35));
 }
 
 #slicer .wire {
