@@ -23,10 +23,10 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="4.0199021"
      inkscape:cx="51.120648"
-     inkscape:cy="66.046385"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="-9"
+     inkscape:cy="106.09711"
+     inkscape:window-width="2400"
+     inkscape:window-height="1261"
+     inkscape:window-x="3191"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg16" />
@@ -151,23 +151,26 @@
      d="m 13,1 h 116 q 12,0 12,12 v 61 q 0,22 -22,22 H 23 Q 1,96 1,74 V 13 Q 1,1 13,1 Z m 8,38 h 100 q 10,0 10,9 0,9 -10,9 H 21 q -10,0 -10,-9 0,-9 10,-9 z"
      id="path13"
      style="fill:url(#bladeGradient)" />
-  <path
-     fill="url(#neckGradient)"
-     stroke="#b3b3b3"
-     stroke-width="2"
-     d="m 58,85 h 26 v 22 q 0,12 -12,12 h -2 q -12,0 -12,-12 z"
-     id="path16"
-     style="fill:url(#neckGradient)" />
-  <rect
-     x="48"
-     y="109"
-     width="46"
-     height="92"
-     rx="24"
-     ry="24"
-     fill="url(#handleGradient)"
-     stroke="#5f2f0f"
-     stroke-width="2"
-     id="rect16"
-     style="fill:url(#handleGradient)" />
+  <g
+     id="g1">
+    <path
+       fill="url(#neckGradient)"
+       stroke="#b3b3b3"
+       stroke-width="2"
+       d="m 58,85 h 26 v 22 q 0,12 -12,12 h -2 q -12,0 -12,-12 z"
+       id="path16"
+       style="fill:url(#neckGradient)" />
+    <rect
+       x="48"
+       y="109"
+       width="46"
+       height="92"
+       rx="24"
+       ry="24"
+       fill="url(#handleGradient)"
+       stroke="#5f2f0f"
+       stroke-width="2"
+       id="rect16"
+       style="fill:url(#handleGradient)" />
+  </g>
 </svg>
