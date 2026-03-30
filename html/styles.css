@@ -159,8 +159,8 @@ body {
 
 #slicer {
   position: absolute;
-  width: 200px;
   height: 200px;
+  width: auto;
   display: block;
   top: 50%;
   left: 50%;
@@ -381,6 +381,7 @@ body {
   border-radius: 18px;
   box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.3);
   animation: fadeHint 3.5s ease forwards;
+  text-align: center;
 }
 
 @keyframes fadeHint {

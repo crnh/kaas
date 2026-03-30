@@ -55,7 +55,7 @@
     const cheeseRect = cheese.getBoundingClientRect();
     // Visible top of cheese after clipping is cutAmount below original top
     const visibleTop = cheeseRect.top + cutAmount;
-    slice.style.top = visibleTop + window.scrollY + "px";
+    slice.style.top = visibleTop + "px";
     slice.style.position = "fixed";
     // No clip-path here; slice has its own height. We just align internal fill.
     // Slight horizontal randomness for variety
